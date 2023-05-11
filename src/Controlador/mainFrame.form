@@ -46,14 +46,14 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="Options" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="Modelo_Vista" max="32767" attributes="0"/>
+                  <Component id="contenido" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="Options" max="32767" attributes="0"/>
-              <Component id="Modelo_Vista" alignment="0" max="32767" attributes="0"/>
+              <Component id="contenido" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -203,7 +203,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="Modelo_Vista">
+        <Container class="javax.swing.JPanel" name="contenido">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
