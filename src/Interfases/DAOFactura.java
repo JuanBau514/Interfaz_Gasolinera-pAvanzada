@@ -1,5 +1,5 @@
 
-package Modelo;
+package Interfases;
 import Modelo.Factura;
 import java.util.List;
 

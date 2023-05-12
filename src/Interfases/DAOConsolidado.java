@@ -1,5 +1,5 @@
 
-package Modelo;
+package Interfases;
 import Modelo.Consolidado;
 import java.util.List;
 

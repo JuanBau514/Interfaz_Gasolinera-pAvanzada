@@ -1,4 +1,6 @@
 package Modelo;
+import Coneccion.*;
+import java.sql.*;
 
 /**
  *
@@ -6,15 +8,32 @@ package Modelo;
  */
 public class Tanqueo {
     
+    private int idTanqueo;
     private float Cantidad;
     private float Precio;
     private float Total;
+
+    public Tanqueo(){
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
     public Tanqueo (float Cantidadtank, float Preciotank) {
         this.Cantidad = Cantidadtank;
         this.Precio = Preciotank;
         this.Total = 0;
+        this.idTanqueo = this.idTanqueo;
+    }
+
+    public Tanqueo (float Cantidadtank, float Preciotank, float Totaltank) {
+        this.Cantidad = Cantidadtank;
+        this.Precio = Preciotank;
+        this.Total = Totaltank;
+        this.idTanqueo = this.idTanqueo;
+    }
+
+    public int getIdTanqueo() {
+        return this.idTanqueo;
     }
 
     public float getCantidad() {
@@ -41,6 +60,10 @@ public class Tanqueo {
         this.Total = Total;
     }
 
+    public void setIdTanqueo(int idTanqueo) {
+        this.idTanqueo = idTanqueo;
+    }
+
     public void registrarTanqueoPrecio() {
             this.Total = this.Cantidad / this.Precio; // Multiplicar la cantidad por el precio
     }
@@ -48,7 +71,11 @@ public class Tanqueo {
     public void registrarTanqueoCantidad() {
         this.Total = this.Cantidad * this.Precio; // Multiplicar el total por el precio
     }
-    
+
+    public boolean eliminarTanqueo(Tanqueo tanqueo) {
+        return false;
+    }
+
   
     public void limpiarRegistro() {
         this.Cantidad = 0;

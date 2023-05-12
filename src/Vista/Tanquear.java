@@ -6,6 +6,9 @@ package Vista;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import Controlador.ConTanqueo;
+import Interfases.DAOTanqueo;
 import Modelo.Tanqueo;
 
 /**
@@ -243,33 +246,51 @@ public class Tanquear extends javax.swing.JPanel {
     private void EmpezarTanquoActionPerformed(java.awt.event.ActionEvent evt) {
 
         if (this.campoVolumen.getText().isEmpty()) {
-           float precio = Float.parseFloat(this.campoPrecio.getText());
 
+           float precio = Float.parseFloat(this.campoPrecio.getText());
             Tanqueo auxTanqueo = new Tanqueo(precio,this.precioV);
             auxTanqueo.registrarTanqueoPrecio();
             this.CampoResultado.setText(String.valueOf(auxTanqueo.getTotal()));
 
-        } else if (this.campoPrecio.getText().isEmpty()) {
-            float volumenV = Float.parseFloat(this.campoVolumen.getText());
+            // registrando tanqueo en la base de datos
 
+            try {
+                DAOTanqueo daoTanqueo = new ConTanqueo();
+                daoTanqueo.registrar(auxTanqueo);
+            } catch (Exception e) {
+                System.out.println("Error al registrar el tanqueo");
+            }
+            
+        } else if (this.campoPrecio.getText().isEmpty()) {
+
+            float volumenV = Float.parseFloat(this.campoVolumen.getText());
             Tanqueo auxTanqueo = new Tanqueo(volumenV, this.precioV);
             auxTanqueo.registrarTanqueoCantidad();
             this.CampoResultado.setText(String.valueOf(auxTanqueo.getTotal()));
 
-        } else {
+            // registrando tanqueo en la base de datos
+            try {
+                DAOTanqueo daoTanqueo = new ConTanqueo();
+                daoTanqueo.registrar(auxTanqueo);
+            } catch (Exception e) {
+                System.out.println("Error al registrar el tanqueo");
+            }
+        } 
+        else {
             this.CampoResultado.setText("Error de ingreso");
         }
 
     }
 
-    private void Parar_TanqueoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Parar_TanqueoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Parar_TanqueoActionPerformed
+    private void Parar_TanqueoActionPerformed(java.awt.event.ActionEvent evt) {
+        this.pararTanqueo = true;
+    }
 
-    private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LimpiarActionPerformed
-
+    private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {
+        this.campoPrecio.setText("");
+        this.campoVolumen.setText("");
+        this.CampoResultado.setText("");
+    }
  
 
 
