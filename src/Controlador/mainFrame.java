@@ -228,7 +228,7 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void GenerarFacturaActionPerformed(java.awt.event.ActionEvent evt) {
         //Funcion para generar la factura de venta en formato PDF 
-
+        this.mostrarPanel(new Factura());
     }
 
     private void Comprar_ProductosActionPerformed(java.awt.event.ActionEvent evt) {
