@@ -4,15 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Modelo/Productos.java</file>
-            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Modelo/DAOTanqueo.java</file>
-            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Controlador/ControladorFactura.java</file>
             <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Coneccion/Connector.java</file>
-            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Modelo/Factura.java</file>
-            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Modelo/Consolidado.java</file>
+            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Controlador/ConConsolidado.java</file>
+            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Controlador/ConTanqueo.java</file>
+            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Controlador/ConFactura.java</file>
+            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Vista/Factura.java</file>
             <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Modelo/Tanqueo.java</file>
-            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/BaseDeDatos/Gasolinera_Parcial.sql</file>
-            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Modelo/DAOConsolidado.java</file>
-            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Modelo/DAOProductos.java</file>
+            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Vista/Consolidado.java</file>
+            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Vista/Productos.java</file>
+            <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Interfases/DAOTanqueo.java</file>
             <file>file:/home/juanpbcl/Proyectos/Java/Interfaz_Gasolinera-pAvanzada/src/Vista/Tanquear.java</file>
         </group>
     </open-files>
