@@ -261,6 +261,8 @@ public class Tanquear extends javax.swing.JPanel {
                 System.out.println("Error al registrar el tanqueo");
             }
             
+            // mandando a imprimir el tanqueo en el jtable factura
+            
         } else if (this.campoPrecio.getText().isEmpty()) {
 
             float volumenV = Float.parseFloat(this.campoVolumen.getText());

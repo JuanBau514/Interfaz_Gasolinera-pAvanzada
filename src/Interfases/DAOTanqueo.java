@@ -1,7 +1,7 @@
 
 package Interfases;
 
-import java.util.ArrayList;
+import java.util.List;
 import Modelo.Tanqueo;
 
 /**
@@ -11,7 +11,7 @@ import Modelo.Tanqueo;
 public interface DAOTanqueo {
 
     public void registrar(Tanqueo tanqueo) throws Exception;
-    public void modificar(Tanqueo tanqueo) throws Exception;
-    public ArrayList<Tanqueo> listar() throws Exception;
+    public void modificar(Tanqueo tanqueo) throws Exception; 
+    public List<Tanqueo> listar() throws Exception;
 
 }

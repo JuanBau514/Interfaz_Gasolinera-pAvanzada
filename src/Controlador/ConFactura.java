@@ -1,17 +1,24 @@
 package Controlador;
 
-import Interfases.DAOTanqueo;
-import Coneccion.*;
-import Modelo.Tanqueo;
-import java.util.ArrayList;
-import java.sql.*;
+import java.util.Vector;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
 
-public class ConTanqueo extends Connector implements DAOTanqueo{
+
+import Coneccion.Connector;
+import Interfases.DAOTanqueo;
+import Modelo.Tanqueo;
+
+/**
+ *
+ * @author juanpbcl
+ */
+public class ConFactura extends Connector implements DAOTanqueo{
 
     @Override
     public void registrar(Tanqueo tanqueo) throws Exception {
-        try {
+        try{
             this.conectar();
             String sql = "INSERT INTO Tanqueo (Cantidad, Precio, Total) VALUES (?,?,?)";
             PreparedStatement ps = this.connection.prepareStatement(sql);
@@ -20,6 +27,7 @@ public class ConTanqueo extends Connector implements DAOTanqueo{
             ps.setFloat(3, tanqueo.getTotal());
             ps.executeUpdate();
             ps.close();
+            
         } catch (Exception e) {
             throw e;
         } finally {
@@ -29,7 +37,7 @@ public class ConTanqueo extends Connector implements DAOTanqueo{
 
     @Override
     public void modificar(Tanqueo tanqueo) throws Exception {
-        try {
+        try{
             this.conectar();
             String sql = "UPDATE Tanqueo SET Cantidad = ?, Precio = ?, Total = ? WHERE idTanqueo = ?";
             PreparedStatement ps = this.connection.prepareStatement(sql);
@@ -47,13 +55,13 @@ public class ConTanqueo extends Connector implements DAOTanqueo{
     }
 
     @Override
-    public ArrayList<Tanqueo> listar() throws Exception {
-        ArrayList<Tanqueo> lista = new ArrayList<Tanqueo>();
+    public List<Tanqueo> listar() throws Exception {
         try {
             this.conectar();
             String sql = "SELECT * FROM Tanqueo";
             PreparedStatement ps = this.connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
+            List<Tanqueo> lista = new Vector<Tanqueo>();
             while (rs.next()) {
                 Tanqueo tanqueo = new Tanqueo();
                 tanqueo.setIdTanqueo(rs.getInt("idTanqueo"));
@@ -64,12 +72,13 @@ public class ConTanqueo extends Connector implements DAOTanqueo{
             }
             rs.close();
             ps.close();
+            return lista;
         } catch (Exception e) {
             throw new Exception("Error al listar los consolidados: " + e.getMessage());
         } finally {
             this.desconectar();
         }
-        return lista;
     }
     
+   
 }

@@ -8,68 +8,86 @@ package Modelo;
 public class Consolidado {
 
     private int id;
-    private String nombreP;
-    private String descripcionP;
-    private int cantidadDisponibleP;
-    private int CantidadVendidaP;
-    private int VentaTotalP;
+    private int Fk_Ventas;
+    private String nombre_Producto;
+    private String descripcion;
+    private int cantidadDisponible;
+    private int CantidadVendida;
+    private int Fk_Productos;
+    private int VentaTotal;
 
-
-    public Consolidado(int idProducto, String nombre, String descripcion, int cantidadDisponible, int CantidadVendida, int VentaTotal) {
-        this.id = idProducto;
-        this.nombreP = nombre;
-        this.descripcionP = descripcion;
-        this.cantidadDisponibleP = cantidadDisponible;
-        this.CantidadVendidaP = CantidadVendida;
-        this.VentaTotalP = VentaTotal;
+    public Consolidado(int id, int Fk_Ventas, String nombre_Producto, String descripcion, int cantidadDisponible, int CantidadVendida, int Fk_Productos,int VentaTotal) {
+        this.id = id;
+        this.Fk_Ventas = Fk_Ventas;
+        this.nombre_Producto = nombre_Producto;
+        this.descripcion = descripcion;
+        this.cantidadDisponible = cantidadDisponible;
+        this.CantidadVendida = CantidadVendida;
+        this.Fk_Productos = Fk_Productos;
+        this.VentaTotal = VentaTotal;
     }
 
     public int getId() {
         return this.id;
     }
 
-    public String getNombreP() {
-        return this.nombreP;
+    public int getFk_Ventas() {
+        return this.Fk_Ventas;
     }
 
-    public String getDescripcionP() {
-        return this.descripcionP;
+    public String getNombre_Producto() {
+        return this.nombre_Producto;
     }
 
-    public int getCantidadDisponibleP() {
-        return this.cantidadDisponibleP;
+    public String getDescripcion() {
+        return this.descripcion;
     }
 
-    public int getCantidadVendidaP() {
-        return this.CantidadVendidaP;
+    public int getCantidadDisponible() {
+        return this.cantidadDisponible;
     }
 
-    public int getVentaTotalP() {
-        return this.VentaTotalP;
+    public int getCantidadVendida() {
+        return this.CantidadVendida;
     }
 
-    public void setId(int idProducto) {
-        this.id = idProducto;
+    public int getVentaTotal() {
+        return this.VentaTotal;
     }
 
-    public void setNombreP(String nombre) {
-        this.nombreP = nombre;
+    public int getFkProductos() {
+        return this.Fk_Productos;
     }
 
-    public void setDescripcionP(String descripcion) {
-        this.descripcionP = descripcion;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setCantidadDisponibleP(int cantidadDisponible) {
-        this.cantidadDisponibleP = cantidadDisponible;
+    public void setFk_Ventas(int Fk_Ventas) {
+        this.Fk_Ventas = Fk_Ventas;
     }
 
-    public void setCantidadVendidaP(int CantidadVendida) {
-        this.CantidadVendidaP = CantidadVendida;
+    public void setNombre_Producto(String nombre_Producto) {
+        this.nombre_Producto = nombre_Producto;
     }
 
-    public void setVentaTotalP(int VentaTotal) {
-        this.VentaTotalP = VentaTotal;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
+    public void setCantidadDisponible(int cantidadDisponible) {
+        this.cantidadDisponible = cantidadDisponible;
+    }
+
+    public void setCantidadVendida(int CantidadVendida) {
+        this.CantidadVendida = CantidadVendida;
+    }
+
+    public void setVentaTotal(float f) {
+        this.VentaTotal = (int) f;
+    }
+
+    public void setFkProductos(int Fk_Productos) {
+        this.Fk_Productos = Fk_Productos;
+    }
 }
